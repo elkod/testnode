@@ -1,65 +1,39 @@
+# node-js-getting-started
 
-[![Build Status](https://img.shields.io/travis/madhums/node-express-mongoose-demo.svg?style=flat)](https://travis-ci.org/madhums/node-express-mongoose-demo)
-[![Dependencies](https://img.shields.io/david/madhums/node-express-mongoose-demo.svg?style=flat)](https://david-dm.org/madhums/node-express-mongoose-demo)
-[![Code climate](http://img.shields.io/codeclimate/github/madhums/node-express-mongoose-demo.svg?style=flat)](https://codeclimate.com/github/madhums/node-express-mongoose-demo)
-[![Join Gitter Chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat)](https://gitter.im/madhums/node-express-mongoose-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Gittip](https://img.shields.io/gratipay/madhums.svg?style=flat)](https://www.gratipay.com/madhums/)
+A barebones Node.js app using [Express 4](http://expressjs.com/).
 
-# Nodejs Express Mongoose Demo
+This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
-This is a demo node.js application illustrating various features used in everyday web development, with a fine touch of best practices. The demo app is a blog application where users (signing up using facebook, twitter, github and simple registrations) can create an article, delete an article and add comments on the article.
+## Running Locally
 
-## Boilerplate
-
-Want to build something from scratch? use the [boilerplate](https://github.com/madhums/node-express-mongoose)
-
-* Checkout the [apps that are built using this approach](https://github.com/madhums/node-express-mongoose/wiki/Apps-built-using-this-approach)
-* The [wiki](https://github.com/madhums/node-express-mongoose/wiki) is wip, it has some information about the way application is setup.
-
-## Requirements
-
-* [NodeJs](http://nodejs.org) >= 6.x 
-* [mongodb](http://mongodb.org)
-* ~~[imagemagick](http://www.imagemagick.org/script/index.php)~~
-
-## Install
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
 ```sh
-$ git clone git://github.com/madhums/node-express-mongoose-demo.git
+$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
+$ cd node-js-getting-started
 $ npm install
-```
-
-**NOTE:** Do not forget to set the facebook, twitter, google, linkedin and github `CLIENT_ID`s and `SECRET`s. In `development` env, you can set the env variables by doing
-
-```sh
-cp .env.example .env
-```
-
-and replace the values there. In `production` env, it is not safe to keep the ids and secrets in a file, so you need to set it up via commandline. If you are using heroku checkout how environment variables are set [here](https://devcenter.heroku.com/articles/config-vars).
-
-If you want to use image uploads, don't forget to set these env variables for
-imager config.
-
-```sh
-IMAGER_S3_KEY=AWS_S3_KEY
-IMAGER_S3_SECRET=AWS_S3_SECRET
-IMAGER_S3_BUCKET=AWS_S3_BUCKET
-```
-
-then
-
-```sh
 $ npm start
 ```
 
-Then visit [http://localhost:3000/](http://localhost:3000/)
+Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-## Tests
+## Deploying to Heroku
 
-```sh
-$ npm test
 ```
+$ heroku create
+$ git push heroku master
+$ heroku open
+```
+or
 
-## License
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-MIT
+## Documentation
+
+For more information about using Node.js on Heroku, see these Dev Center articles:
+
+- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
+- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)

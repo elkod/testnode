@@ -1,6 +1,12 @@
-node_modules/
-.monitor
-config/env/env.json
-Makefile
+# Node build artifacts
+node_modules
+npm-debug.log
+
+# Local development
+*.env
+*.dev
 .DS_Store
-.env
+
+# Docker
+Dockerfile
+docker-compose.yml
